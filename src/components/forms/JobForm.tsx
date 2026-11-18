@@ -42,7 +42,7 @@ interface JobFormProps {
 
 export function JobForm({ initialData, onSubmit, onCancel }: JobFormProps) {
   const form = useForm<JobFormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema) as any,
     defaultValues: {
       titulo: '',
       descricao: '',

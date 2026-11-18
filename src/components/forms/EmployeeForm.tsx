@@ -48,7 +48,7 @@ export function EmployeeForm({
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const form = useForm<EmployeeFormValues>({
-    resolver: zodResolver(employeeSchema),
+    resolver: zodResolver(employeeSchema) as any,
     defaultValues: {
       nome: '',
       cpf: '',

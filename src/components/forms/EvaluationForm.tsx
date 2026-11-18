@@ -52,7 +52,7 @@ export function EvaluationForm({
   isLoading,
 }: EvaluationFormProps) {
   const form = useForm<EvaluationFormValues>({
-    resolver: zodResolver(evaluationSchema),
+    resolver: zodResolver(evaluationSchema) as any,
     defaultValues: {
       periodo: '',
       notaPontualidade: 3,
